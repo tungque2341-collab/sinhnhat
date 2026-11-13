@@ -1,0 +1,1942 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thiết Kế Phông Nền Sinh Nhật 24 Tháng - 5 Chủ Đề Chuẩn In Ấn</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts hỗ trợ tiếng Việt đầy đủ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Dancing+Script:wght@700&family=Fredoka:wght@600;700&family=Montserrat:wght@700;800;900&family=Pacifico&family=Playfair+Display:ital,wght@0,700;1,700&family=Quicksand:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f3f4f6;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #f472b6;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ec4899;
+    }
+    .workspace-bg {
+      background-color: #e2e8f0;
+      background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+      background-size: 18px 18px;
+    }
+    input[type="range"] {
+      accent-color: #ec4899;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col lg:flex-row text-slate-800">
+
+  <!-- CỘT TRÁI: BẢNG ĐIỀU KHIỂN -->
+  <aside class="w-full lg:w-[440px] xl:w-[470px] bg-white border-b lg:border-b-0 lg:border-r border-slate-200 flex flex-col lg:h-screen lg:sticky lg:top-0 z-20 shadow-sm">
+    <!-- Header -->
+    <div class="p-4 border-b border-slate-100 bg-gradient-to-r from-pink-50 via-amber-50/60 to-sky-50">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="flex items-center gap-1.5 mb-1">
+            <span class="inline-block px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-pink-600 bg-pink-100 rounded-full">5 Chủ Đề Cute</span>
+            <span class="inline-block px-2 py-0.5 text-[10px] font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-100 rounded-full">In 300 DPI</span>
+          </div>
+          <h1 class="text-lg font-extrabold text-slate-800 tracking-tight">Studio Phông Nền Sinh Nhật Bé</h1>
+        </div>
+        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-500 text-white flex items-center justify-center shadow-md shadow-pink-200 text-lg">
+          🎂
+        </div>
+      </div>
+      <p class="text-[11px] text-slate-500 mt-1">Chuyển đổi 5 phong cách chụp ảnh bé ngay lập tức, giữ nguyên toàn bộ ảnh và chữ.</p>
+    </div>
+
+    <!-- Nội dung cuộn của bảng điều khiển -->
+    <div class="flex-1 overflow-y-auto p-4 space-y-4">
+
+      <!-- 1. CHỌN 5 CHỦ ĐỀ ĐẶC SẮC -->
+      <section class="bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-extrabold uppercase tracking-wide text-slate-700 flex items-center gap-1.5">
+            <span class="w-5 h-5 rounded-full bg-pink-500 text-white text-[11px] flex items-center justify-center">1</span>
+            Chọn Chủ Đề Chụp Ảnh (5 Mẫu)
+          </h2>
+          <span id="currentThemeBadge" class="text-[11px] font-bold text-pink-600">Trái Tim Ngọt Ngào</span>
+        </div>
+
+        <div class="grid grid-cols-1 gap-2" id="themeSelectorGrid">
+          <!-- Thẻ 1 -->
+          <button type="button" onclick="selectConcept('sweetheart')" id="concept-sweetheart" class="concept-card text-left p-2.5 rounded-xl border-2 border-pink-500 bg-pink-50/70 flex items-center gap-3 transition cursor-pointer">
+            <span class="w-9 h-9 rounded-xl bg-white shadow-xs flex items-center justify-center text-lg shrink-0">💖</span>
+            <div class="min-w-0 flex-1">
+              <div class="text-xs font-extrabold text-slate-800">1. Trái Tim Ngọt Ngào (Sweet Heart)</div>
+              <div class="text-[11px] text-slate-500 truncate">Khung trái tim 3D viền ren, mây bồng bềnh & tim treo dây</div>
+            </div>
+          </button>
+
+          <!-- Thẻ 2 -->
+          <button type="button" onclick="selectConcept('teddy')" id="concept-teddy" class="concept-card text-left p-2.5 rounded-xl border-2 border-transparent bg-white hover:bg-amber-50/60 flex items-center gap-3 transition cursor-pointer">
+            <span class="w-9 h-9 rounded-xl bg-amber-50 shadow-xs flex items-center justify-center text-lg shrink-0">🧸</span>
+            <div class="min-w-0 flex-1">
+              <div class="text-xs font-extrabold text-slate-800">2. Gấu Bông & Bóng Bay (Korean Pastel)</div>
+              <div class="text-[11px] text-slate-500 truncate">Vòm tai gấu cute, khinh khí cầu, cờ tam giác & bóng pastel</div>
+            </div>
+          </button>
+
+          <!-- Thẻ 3 -->
+          <button type="button" onclick="selectConcept('astronaut')" id="concept-astronaut" class="concept-card text-left p-2.5 rounded-xl border-2 border-transparent bg-white hover:bg-indigo-50/60 flex items-center gap-3 transition cursor-pointer">
+            <span class="w-9 h-9 rounded-xl bg-indigo-50 shadow-xs flex items-center justify-center text-lg shrink-0">🚀</span>
+            <div class="min-w-0 flex-1">
+              <div class="text-xs font-extrabold text-slate-800">3. Phi Hành Gia Nhí & Vũ Trụ</div>
+              <div class="text-[11px] text-slate-500 truncate">Cửa sổ tàu vũ trụ phát sáng, tên lửa, hành tinh & sao lấp lánh</div>
+            </div>
+          </button>
+
+          <!-- Thẻ 4 -->
+          <button type="button" onclick="selectConcept('daisy')" id="concept-daisy" class="concept-card text-left p-2.5 rounded-xl border-2 border-transparent bg-white hover:bg-emerald-50/60 flex items-center gap-3 transition cursor-pointer">
+            <span class="w-9 h-9 rounded-xl bg-emerald-50 shadow-xs flex items-center justify-center text-lg shrink-0">🌼</span>
+            <div class="min-w-0 flex-1">
+              <div class="text-xs font-extrabold text-slate-800">4. Vườn Cổ Tích & Hoa Cúc</div>
+              <div class="text-[11px] text-slate-500 truncate">Khung bông hoa 12 cánh, cầu vồng pastel, bướm xinh & lá xanh</div>
+            </div>
+          </button>
+
+          <!-- Thẻ 5 -->
+          <button type="button" onclick="selectConcept('circus')" id="concept-circus" class="concept-card text-left p-2.5 rounded-xl border-2 border-transparent bg-white hover:bg-rose-50/60 flex items-center gap-3 transition cursor-pointer">
+            <span class="w-9 h-9 rounded-xl bg-rose-50 shadow-xs flex items-center justify-center text-lg shrink-0">👑</span>
+            <div class="min-w-0 flex-1">
+              <div class="text-xs font-extrabold text-slate-800">5. Rạp Xiếc & Vương Miện Hoàng Gia</div>
+              <div class="text-[11px] text-slate-500 truncate">Huy hiệu vương miện vàng kim, rèm nhung, pháo giấy confetti</div>
+            </div>
+          </button>
+        </div>
+
+        <!-- Bảng màu phụ phối hợp -->
+        <div class="pt-2 border-t border-slate-200/70">
+          <div class="flex items-center justify-between mb-1.5">
+            <span class="text-[11px] font-bold text-slate-600">Bảng màu phối hợp (Bé trai / Bé gái):</span>
+            <span id="paletteNameLabel" class="text-[11px] font-bold text-slate-500">Mặc định chủ đề</span>
+          </div>
+          <div class="grid grid-cols-6 gap-1.5" id="paletteSelectorGrid">
+            <button type="button" onclick="selectPalette('default')" id="pal-default" title="Mặc định theo chủ đề" class="pal-btn h-8 rounded-xl border-2 border-slate-800 bg-gradient-to-tr from-pink-300 via-amber-200 to-sky-300 flex items-center justify-center text-[10px] font-extrabold text-slate-800 shadow-xs cursor-pointer">Auto</button>
+            <button type="button" onclick="selectPalette('strawberry')" id="pal-strawberry" title="Hồng Dâu" class="pal-btn h-8 rounded-xl border-2 border-transparent bg-gradient-to-br from-pink-200 to-rose-400 shadow-xs cursor-pointer"></button>
+            <button type="button" onclick="selectPalette('sky')" id="pal-sky" title="Xanh Bầu Trời" class="pal-btn h-8 rounded-xl border-2 border-transparent bg-gradient-to-br from-sky-200 to-blue-500 shadow-xs cursor-pointer"></button>
+            <button type="button" onclick="selectPalette('cream')" id="pal-cream" title="Kem Sữa Hàn Quốc" class="pal-btn h-8 rounded-xl border-2 border-transparent bg-gradient-to-br from-amber-100 to-amber-500 shadow-xs cursor-pointer"></button>
+            <button type="button" onclick="selectPalette('sage')" id="pal-sage" title="Xanh Bơ Pastel" class="pal-btn h-8 rounded-xl border-2 border-transparent bg-gradient-to-br from-emerald-100 to-emerald-500 shadow-xs cursor-pointer"></button>
+            <button type="button" onclick="selectPalette('lavender')" id="pal-lavender" title="Tím Lavender" class="pal-btn h-8 rounded-xl border-2 border-transparent bg-gradient-to-br from-purple-200 to-indigo-500 shadow-xs cursor-pointer"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. HỆ THỐNG NẠP ẢNH THÔNG MINH -->
+      <section class="bg-rose-50/60 border border-rose-100 rounded-2xl p-3.5 space-y-3">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xs font-extrabold uppercase tracking-wide text-rose-900 flex items-center gap-1.5">
+            <span class="w-5 h-5 rounded-full bg-rose-500 text-white text-[11px] flex items-center justify-center">2</span>
+            Nạp Ảnh & Căn Khung
+          </h2>
+          <div class="flex items-center gap-1.5">
+            <span id="uploadedCounter" class="text-[11px] font-bold text-rose-600 bg-white px-2 py-0.5 rounded-full border border-rose-200">24 / 24 ô</span>
+            <button type="button" onclick="clearAllPhotos()" class="text-[11px] font-bold text-slate-500 hover:text-rose-600 underline cursor-pointer">Xóa tất cả</button>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <button type="button" onclick="document.getElementById('heartInput').click()" class="flex items-center justify-center gap-1.5 py-2.5 px-2.5 bg-white hover:bg-rose-100/70 text-rose-700 border border-rose-200 rounded-xl text-xs font-bold transition shadow-xs cursor-pointer">
+            <span>🖼️</span>
+            <span>Ảnh Chính Lớn</span>
+          </button>
+
+          <button type="button" onclick="document.getElementById('bulkInput').click()" class="flex items-center justify-center gap-1.5 py-2.5 px-2.5 bg-rose-500 hover:bg-rose-600 text-white rounded-xl text-xs font-bold transition shadow-sm shadow-rose-200 cursor-pointer">
+            <span>📸</span>
+            <span>Tải Hàng Loạt 24 Ảnh</span>
+          </button>
+        </div>
+
+        <!-- Căn chỉnh ảnh chính lớn (Zoom, X, Y, Xoay) -->
+        <div class="pt-2 border-t border-rose-200/60 space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[11px] font-bold text-slate-700">Căn mặt bé trong Khung Chính:</span>
+            <button type="button" onclick="resetHeroTransform()" class="text-[11px] font-bold text-rose-600 hover:underline cursor-pointer">Đặt lại</button>
+          </div>
+          <div class="grid grid-cols-2 gap-x-3 gap-y-1.5">
+            <div>
+              <label class="flex justify-between text-[10px] font-semibold text-slate-500"><span>Phóng to</span><span id="heroZoomVal">100%</span></label>
+              <input type="range" id="heroZoom" min="70" max="220" value="100" class="w-full h-1.5 bg-rose-200 rounded-lg cursor-pointer" oninput="updateHeroTransform()">
+            </div>
+            <div>
+              <label class="flex justify-between text-[10px] font-semibold text-slate-500"><span>Xoay nhẹ</span><span id="heroRotVal">0°</span></label>
+              <input type="range" id="heroRot" min="-25" max="25" value="0" class="w-full h-1.5 bg-rose-200 rounded-lg cursor-pointer" oninput="updateHeroTransform()">
+            </div>
+            <div>
+              <label class="flex justify-between text-[10px] font-semibold text-slate-500"><span>Dịch ngang (X)</span><span id="heroXVal">0</span></label>
+              <input type="range" id="heroOffsetX" min="-60" max="60" value="0" class="w-full h-1.5 bg-rose-200 rounded-lg cursor-pointer" oninput="updateHeroTransform()">
+            </div>
+            <div>
+              <label class="flex justify-between text-[10px] font-semibold text-slate-500"><span>Dịch dọc (Y)</span><span id="heroYVal">0</span></label>
+              <input type="range" id="heroOffsetY" min="-60" max="60" value="0" class="w-full h-1.5 bg-rose-200 rounded-lg cursor-pointer" oninput="updateHeroTransform()">
+            </div>
+          </div>
+        </div>
+
+        <!-- Kiểu khung 24 ảnh nhỏ -->
+        <div class="pt-2 border-t border-rose-200/60 space-y-1.5">
+          <span class="block text-[11px] font-bold text-slate-700">Kiểu khung viền 24 ảnh tháng:</span>
+          <div class="grid grid-cols-3 gap-1.5">
+            <button type="button" onclick="setFrameStyle('rounded')" id="fstyle-rounded" class="fstyle-btn py-1.5 px-2 rounded-xl border-2 border-rose-500 bg-white text-[11px] font-bold text-rose-700 cursor-pointer">Bo góc mềm</button>
+            <button type="button" onclick="setFrameStyle('polaroid')" id="fstyle-polaroid" class="fstyle-btn py-1.5 px-2 rounded-xl border-2 border-transparent bg-white/80 text-[11px] font-bold text-slate-600 cursor-pointer">Polaroid trắng</button>
+            <button type="button" onclick="setFrameStyle('stamp')" id="fstyle-stamp" class="fstyle-btn py-1.5 px-2 rounded-xl border-2 border-transparent bg-white/80 text-[11px] font-bold text-slate-600 cursor-pointer">Tem thư răng</button>
+          </div>
+        </div>
+
+        <!-- Danh sách tinh chỉnh từng ảnh tháng (Mở rộng) -->
+        <div class="pt-1">
+          <button type="button" onclick="toggleSlotManager()" class="w-full flex items-center justify-between text-[11px] font-bold text-rose-700 hover:text-rose-900 py-1 cursor-pointer">
+            <span>⚙️ Căn chỉnh góc nhìn & nhãn từng tháng (1 → 24)</span>
+            <span id="slotManagerIcon">▼</span>
+          </button>
+          <div id="slotManagerBox" class="hidden mt-2 max-h-56 overflow-y-auto space-y-1.5 p-2 bg-white rounded-xl border border-rose-200">
+            <!-- Sinh tự động 24 dòng bằng JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. TÙY CHỈNH CHỮ LINH HOẠT -->
+      <section class="bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 space-y-2.5">
+        <h2 class="text-xs font-extrabold uppercase tracking-wide text-slate-700 flex items-center gap-1.5">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-white text-[11px] flex items-center justify-center">3</span>
+          Nội Dung Chữ Trung Tâm
+        </h2>
+
+        <div>
+          <label class="block text-[11px] font-bold text-slate-600 mb-0.5">Dòng phụ phía trên</label>
+          <input type="text" id="inputSubtitle" value="24 months of love" oninput="scheduleRender()" class="w-full px-3 py-1.5 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 font-semibold" placeholder="24 months of love / Happy 2nd Birthday">
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 mb-0.5">Tên bé dòng 1</label>
+            <input type="text" id="inputNameLine1" value="ĐỖ NGỌC" oninput="scheduleRender()" class="w-full px-3 py-1.5 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 font-extrabold uppercase" placeholder="ĐỖ NGỌC">
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 mb-0.5">Tên bé dòng 2</label>
+            <input type="text" id="inputNameLine2" value="MINH VY" oninput="scheduleRender()" class="w-full px-3 py-1.5 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 font-extrabold uppercase" placeholder="MINH VY">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 mb-0.5">Biệt danh (Chữ bay bổng)</label>
+            <input type="text" id="inputNickname" value="Cherry" oninput="scheduleRender()" class="w-full px-3 py-1.5 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 font-bold" placeholder="Cherry">
+          </div>
+          <div>
+            <label class="block text-[11px] font-bold text-slate-600 mb-0.5">Ngày sinh / Lời chúc nhỏ</label>
+            <input type="text" id="inputBirthDate" value="15 • 08 • 2024 — Happy 2nd Birthday" oninput="scheduleRender()" class="w-full px-3 py-1.5 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 font-semibold" placeholder="Ngày sinh hoặc lời chúc">
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. CẤU HÌNH XUẤT FILE IN ẤN -->
+      <section class="bg-slate-50 border border-slate-200/80 rounded-2xl p-3.5 space-y-2.5">
+        <h2 class="text-xs font-extrabold uppercase tracking-wide text-slate-700 flex items-center gap-1.5">
+          <span class="w-5 h-5 rounded-full bg-slate-800 text-white text-[11px] flex items-center justify-center">4</span>
+          Tùy Chọn Xuất File In Ấn
+        </h2>
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block text-[10px] font-bold text-slate-500 mb-0.5">Độ phân giải in</label>
+            <select id="exportResolution" class="w-full px-2.5 py-1.5 text-xs font-bold bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-pink-400">
+              <option value="3">3000 × 4500 px (300 DPI)</option>
+              <option value="4">4000 × 6000 px (Khổ Lớn)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[10px] font-bold text-slate-500 mb-0.5">Định dạng file</label>
+            <select id="exportFormat" class="w-full px-2.5 py-1.5 text-xs font-bold bg-white border border-slate-200 rounded-xl focus:outline-none focus:border-pink-400">
+              <option value="png">PNG (Không nén, Siêu nét)</option>
+              <option value="jpeg">JPG (Chất lượng 100%)</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Nút xuất file in ấn cố định dưới cùng -->
+    <div class="p-3.5 bg-white border-t border-slate-200 space-y-1.5">
+      <button type="button" onclick="exportHighResFile()" class="w-full py-3 px-4 bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-600 hover:to-rose-700 text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-pink-200 flex items-center justify-center gap-2 transition transform active:scale-[0.99] cursor-pointer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        <span>Tải Ảnh Đi In Chất Lượng Cao</span>
+      </button>
+      <div class="flex items-center justify-between text-[11px] text-slate-400 px-1">
+        <span>Tỷ lệ dọc 2:3 (1m×1.5m, 2m×3m)</span>
+        <button type="button" onclick="loadArtisticDemoData(true)" class="text-pink-500 hover:underline font-bold cursor-pointer">Nạp lại bộ ảnh mẫu</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- CỘT PHẢI: VÙNG XEM TRƯỚC TRỰC TIẾP -->
+  <main class="flex-1 workspace-bg flex flex-col items-center justify-center p-4 sm:p-6 overflow-auto relative">
+    <div class="mb-2.5 flex flex-wrap items-center justify-center gap-2 bg-white/95 backdrop-blur-xs px-4 py-1.5 rounded-full shadow-xs border border-slate-200/80 text-xs text-slate-600">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      <span>Bấm trực tiếp vào <strong>Khung Chính</strong> hoặc <strong>từng ô tháng</strong> trên ảnh để thay ảnh riêng lẻ</span>
+    </div>
+
+    <div id="canvasWrapper" class="relative shadow-2xl rounded-xl overflow-hidden bg-white border-4 border-white transition-all">
+      <canvas id="previewCanvas" class="block cursor-pointer"></canvas>
+      <div id="hoverHint" class="pointer-events-none hidden absolute bg-slate-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-md backdrop-blur-xs">
+        Bấm để chọn ảnh
+      </div>
+    </div>
+
+    <!-- Thông báo nổi (Toast) -->
+    <div id="toastBox" class="fixed bottom-5 right-5 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+      <div class="bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3 text-sm font-semibold">
+        <span id="toastIcon" class="text-lg">✨</span>
+        <span id="toastMsg">Đã cập nhật!</span>
+      </div>
+    </div>
+
+    <!-- Lớp phủ tiến trình xuất file -->
+    <div id="exportOverlay" class="hidden fixed inset-0 bg-slate-900/65 backdrop-blur-xs z-50 flex items-center justify-center p-4">
+      <div class="bg-white rounded-3xl p-6 max-w-sm w-full text-center shadow-2xl space-y-3">
+        <div class="w-12 h-12 border-4 border-pink-200 border-t-pink-500 rounded-full animate-spin mx-auto"></div>
+        <h3 id="exportProgressTitle" class="text-base font-extrabold text-slate-800">Đang kết xuất ảnh 3000 × 4500 px...</h3>
+        <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+          <div id="exportProgressBar" class="bg-pink-500 h-full w-1/4 transition-all duration-300"></div>
+        </div>
+        <p class="text-xs text-slate-500">Đang vẽ sắc nét vector, hiệu ứng ánh sáng và 25 khung ảnh chuẩn in ấn.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- INPUT FILE ẨN -->
+  <input type="file" id="heartInput" accept="image/*" class="hidden" onchange="handleSingleHeroFile(event)">
+  <input type="file" id="singleSlotInput" accept="image/*" class="hidden" onchange="handleSingleSlotFile(event)">
+  <input type="file" id="bulkInput" accept="image/*" multiple class="hidden" onchange="handleBulkFiles(event)">
+
+  <script>
+    // =========================================================================
+    // HẰNG SỐ & CẤU HÌNH 5 CHỦ ĐỀ + 6 BẢNG MÀU PHỤ
+    // =========================================================================
+    const BASE_WIDTH = 1000;
+    const BASE_HEIGHT = 1500;
+
+    const CONCEPT_META = {
+      sweetheart: { name: 'Trái Tim Ngọt Ngào', defaultPalette: 'strawberry' },
+      teddy:      { name: 'Gấu Bông & Bóng Bay', defaultPalette: 'cream' },
+      astronaut:  { name: 'Phi Hành Gia & Vũ Trụ', defaultPalette: 'galaxy' },
+      daisy:      { name: 'Vườn Cổ Tích & Hoa Cúc', defaultPalette: 'sage' },
+      circus:     { name: 'Rạp Xiếc & Vương Miện', defaultPalette: 'royal' }
+    };
+
+    const PALETTES = {
+      strawberry: {
+        label: 'Hồng Dâu Pastel',
+        bgTop: '#fde8ef', bgMid: '#fff6f9', bgBot: '#fbd5e3',
+        accent1: '#f43f5e', accent2: '#ec608a', accent3: '#fda4af',
+        softTint: 'rgba(244, 114, 182, 0.25)',
+        darkText: '#9f1239', nameFill: '#ec608a', nameShadow: '#be185d',
+        badgeBg: '#e57a9c', badgeText: '#ffffff', frameBorder: '#f498b6',
+        isDark: false
+      },
+      sky: {
+        label: 'Xanh Bầu Trời',
+        bgTop: '#dff1fe', bgMid: '#f4faff', bgBot: '#cfe9fc',
+        accent1: '#0284c7', accent2: '#38bdf8', accent3: '#7dd3fc',
+        softTint: 'rgba(56, 189, 248, 0.24)',
+        darkText: '#075985', nameFill: '#298be0', nameShadow: '#0369a1',
+        badgeBg: '#3b9be8', badgeText: '#ffffff', frameBorder: '#7cc4fa',
+        isDark: false
+      },
+      cream: {
+        label: 'Kem Sữa Hàn Quốc',
+        bgTop: '#fbf3e4', bgMid: '#fffcf7', bgBot: '#f5e4c8',
+        accent1: '#b4692e', accent2: '#d98a4e', accent3: '#eab689',
+        softTint: 'rgba(217, 138, 78, 0.22)',
+        darkText: '#783f18', nameFill: '#c8773b', nameShadow: '#7c4218',
+        badgeBg: '#c57d46', badgeText: '#ffffff', frameBorder: '#dfb186',
+        isDark: false
+      },
+      sage: {
+        label: 'Xanh Bơ Pastel',
+        bgTop: '#e7f2e4', bgMid: '#f8fbf6', bgBot: '#d7ebd2',
+        accent1: '#4d7c47', accent2: '#6fa068', accent3: '#a8cf9e',
+        softTint: 'rgba(111, 160, 104, 0.22)',
+        darkText: '#2f522b', nameFill: '#5a8f53', nameShadow: '#33592e',
+        badgeBg: '#679b60', badgeText: '#ffffff', frameBorder: '#9bc494',
+        isDark: false
+      },
+      lavender: {
+        label: 'Tím Lavender',
+        bgTop: '#efe7fe', bgMid: '#faf7ff', bgBot: '#e1d3fc',
+        accent1: '#7c3aed', accent2: '#9b6bf5', accent3: '#c4b5fd',
+        softTint: 'rgba(155, 107, 245, 0.22)',
+        darkText: '#5b21b6', nameFill: '#8b5cf6', nameShadow: '#5b21b6',
+        badgeBg: '#8b5cf6', badgeText: '#ffffff', frameBorder: '#b79cf8',
+        isDark: false
+      },
+      galaxy: {
+        label: 'Vũ Trụ Đêm Sao',
+        bgTop: '#161b33', bgMid: '#232b4d', bgBot: '#19213c',
+        accent1: '#fbbf24', accent2: '#60a5fa', accent3: '#a78bfa',
+        softTint: 'rgba(96, 165, 250, 0.22)',
+        darkText: '#fde68a', nameFill: '#60a5fa', nameShadow: '#1e3a8a',
+        badgeBg: '#f59e0b', badgeText: '#1e1b4b', frameBorder: '#93c5fd',
+        isDark: true
+      },
+      royal: {
+        label: 'Hoàng Gia Vàng Kim',
+        bgTop: '#fdf2f4', bgMid: '#fffdf9', bgBot: '#fae6eb',
+        accent1: '#d97706', accent2: '#e11d48', accent3: '#fbbf24',
+        softTint: 'rgba(251, 191, 36, 0.24)',
+        darkText: '#9f1239', nameFill: '#e11d48', nameShadow: '#881337',
+        badgeBg: '#d97706', badgeText: '#ffffff', frameBorder: '#f3b749',
+        isDark: false
+      }
+    };
+
+    const state = {
+      concept: 'sweetheart',
+      paletteOverride: 'default',
+      frameStyle: 'rounded', // 'rounded' | 'polaroid' | 'stamp'
+      heroImage: null,
+      heroZoom: 1.0,
+      heroOffsetX: 0,
+      heroOffsetY: 0,
+      heroRotation: 0,
+      slots: Array.from({ length: 24 }, (_, i) => ({
+        index: i,
+        label: `THÁNG ${i + 1}`,
+        image: null,
+        focusY: 0 // -40 đến +40 để căn mặt bé theo chiều dọc
+      })),
+      activeSlotIndex: null,
+      hitRegions: [],
+      renderPending: false
+    };
+
+    function getActivePalette() {
+      if (state.paletteOverride === 'default') {
+        const defKey = CONCEPT_META[state.concept].defaultPalette;
+        return PALETTES[defKey];
+      }
+      return PALETTES[state.paletteOverride];
+    }
+
+    // =========================================================================
+    // KHỞI TẠO & QUẢN LÝ SỰ KIỆN
+    // =========================================================================
+    window.addEventListener('DOMContentLoaded', () => {
+      buildSlotManagerUI();
+      setupCanvasInteractions();
+      resizePreviewCanvas();
+      loadArtisticDemoData(false);
+
+      document.fonts.ready.then(() => {
+        scheduleRender();
+      });
+
+      window.addEventListener('resize', () => {
+        resizePreviewCanvas();
+        scheduleRender();
+      });
+    });
+
+    function showToast(msg, icon = '✨') {
+      const box = document.getElementById('toastBox');
+      document.getElementById('toastMsg').textContent = msg;
+      document.getElementById('toastIcon').textContent = icon;
+      box.classList.remove('translate-y-20', 'opacity-0');
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        box.classList.add('translate-y-20', 'opacity-0');
+      }, 2800);
+    }
+
+    function scheduleRender() {
+      if (state.renderPending) return;
+      state.renderPending = true;
+      requestAnimationFrame(() => {
+        state.renderPending = false;
+        const canvas = document.getElementById('previewCanvas');
+        const scale = canvas.width / BASE_WIDTH;
+        renderDesign(canvas, scale, false);
+      });
+    }
+
+    function resizePreviewCanvas() {
+      const canvas = document.getElementById('previewCanvas');
+      const main = canvas.closest('main');
+      const availW = Math.min(main.clientWidth - 32, 620);
+      const availH = window.innerHeight - 105;
+      let targetW = availW;
+      let targetH = targetW * 1.5;
+
+      if (window.innerWidth >= 1024 && targetH > availH) {
+        targetH = Math.max(540, availH);
+        targetW = targetH / 1.5;
+      }
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.style.width = `${Math.round(targetW)}px`;
+      canvas.style.height = `${Math.round(targetH)}px`;
+      canvas.width = Math.round(targetW * dpr);
+      canvas.height = Math.round(targetH * dpr);
+    }
+
+    // =========================================================================
+    // CHUYỂN ĐỔI CHỦ ĐỀ, BẢNG MÀU & KIỂU KHUNG
+    // =========================================================================
+    function selectConcept(conceptKey) {
+      state.concept = conceptKey;
+      document.getElementById('currentThemeBadge').textContent = CONCEPT_META[conceptKey].name;
+
+      document.querySelectorAll('.concept-card').forEach(card => {
+        card.classList.remove('border-pink-500', 'bg-pink-50/70');
+        card.classList.add('border-transparent', 'bg-white');
+      });
+      const activeCard = document.getElementById(`concept-${conceptKey}`);
+      activeCard.classList.remove('border-transparent', 'bg-white');
+      activeCard.classList.add('border-pink-500', 'bg-pink-50/70');
+
+      // Tự động gợi ý kiểu khung viền hợp với chủ đề nếu người dùng chưa khóa
+      if (conceptKey === 'teddy') setFrameStyle('polaroid', true);
+      else if (conceptKey === 'daisy') setFrameStyle('stamp', true);
+      else setFrameStyle('rounded', true);
+
+      scheduleRender();
+      showToast(`Đã chuyển sang chủ đề: ${CONCEPT_META[conceptKey].name}`, '🎨');
+    }
+
+    function selectPalette(palKey) {
+      state.paletteOverride = palKey;
+      document.querySelectorAll('.pal-btn').forEach(btn => {
+        btn.classList.remove('border-slate-800', 'scale-105');
+        btn.classList.add('border-transparent');
+      });
+      const activeBtn = document.getElementById(`pal-${palKey}`);
+      activeBtn.classList.remove('border-transparent');
+      activeBtn.classList.add('border-slate-800', 'scale-105');
+
+      const label = palKey === 'default' ? 'Mặc định chủ đề' : PALETTES[palKey].label;
+      document.getElementById('paletteNameLabel').textContent = label;
+      scheduleRender();
+    }
+
+    function setFrameStyle(styleKey, silent = false) {
+      state.frameStyle = styleKey;
+      document.querySelectorAll('.fstyle-btn').forEach(btn => {
+        btn.classList.remove('border-rose-500', 'bg-white', 'text-rose-700');
+        btn.classList.add('border-transparent', 'bg-white/80', 'text-slate-600');
+      });
+      const activeBtn = document.getElementById(`fstyle-${styleKey}`);
+      activeBtn.classList.remove('border-transparent', 'bg-white/80', 'text-slate-600');
+      activeBtn.classList.add('border-rose-500', 'bg-white', 'text-rose-700');
+      if (!silent) scheduleRender();
+    }
+
+    // =========================================================================
+    // NẠP ẢNH & CĂN CHỈNH KHUNG CHÍNH + 24 Ô THÁNG
+    // =========================================================================
+    function loadImageFromFile(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = reject;
+          img.src = e.target.result;
+        };
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function handleSingleHeroFile(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        state.heroImage = await loadImageFromFile(file);
+        scheduleRender();
+        showToast('Đã cập nhật ảnh chính trung tâm!', '💖');
+      } catch (e) {
+        showToast('Không thể đọc file ảnh này.', '⚠️');
+      }
+      event.target.value = '';
+    }
+
+    async function handleSingleSlotFile(event) {
+      const file = event.target.files[0];
+      if (!file || state.activeSlotIndex === null) return;
+      try {
+        const img = await loadImageFromFile(file);
+        state.slots[state.activeSlotIndex].image = img;
+        updateUploadedCounter();
+        scheduleRender();
+        showToast(`Đã cập nhật ảnh ${state.slots[state.activeSlotIndex].label}!`, '📸');
+      } catch (e) {
+        showToast('Lỗi khi tải ảnh lên.', '⚠️');
+      }
+      event.target.value = '';
+    }
+
+    async function handleBulkFiles(event) {
+      const files = Array.from(event.target.files);
+      if (!files.length) return;
+
+      // Sắp xếp tự nhiên: 1.jpg, 2.jpg, ..., 10.jpg, ..., 24.jpg
+      files.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true, sensitivity: 'base' }));
+
+      const count = Math.min(files.length, 24);
+      showToast(`Đang nạp ${count} ảnh từ Tháng 1 đến Tháng ${count}...`, '⏳');
+
+      for (let i = 0; i < count; i++) {
+        try {
+          const img = await loadImageFromFile(files[i]);
+          state.slots[i].image = img;
+          state.slots[i].focusY = 0;
+        } catch (err) {
+          console.error(err);
+        }
+      }
+
+      updateUploadedCounter();
+      scheduleRender();
+      showToast(`Đã điền liên tục ${count} ảnh vào các tháng!`, '🎉');
+      event.target.value = '';
+    }
+
+    function clearAllPhotos() {
+      state.heroImage = null;
+      state.slots.forEach(s => {
+        s.image = null;
+        s.focusY = 0;
+      });
+      updateUploadedCounter();
+      scheduleRender();
+      showToast('Đã xóa toàn bộ ảnh để bạn tải bộ ảnh mới!', '🧹');
+    }
+
+    function updateUploadedCounter() {
+      const count = state.slots.filter(s => s.image !== null).length;
+      document.getElementById('uploadedCounter').textContent = `${count} / 24 ô`;
+    }
+
+    function updateHeroTransform() {
+      const z = parseInt(document.getElementById('heroZoom').value, 10);
+      const r = parseInt(document.getElementById('heroRot').value, 10);
+      const ox = parseInt(document.getElementById('heroOffsetX').value, 10);
+      const oy = parseInt(document.getElementById('heroOffsetY').value, 10);
+
+      state.heroZoom = z / 100;
+      state.heroRotation = r;
+      state.heroOffsetX = ox;
+      state.heroOffsetY = oy;
+
+      document.getElementById('heroZoomVal').textContent = `${z}%`;
+      document.getElementById('heroRotVal').textContent = `${r}°`;
+      document.getElementById('heroXVal').textContent = ox;
+      document.getElementById('heroYVal').textContent = oy;
+      scheduleRender();
+    }
+
+    function resetHeroTransform() {
+      document.getElementById('heroZoom').value = 100;
+      document.getElementById('heroRot').value = 0;
+      document.getElementById('heroOffsetX').value = 0;
+      document.getElementById('heroOffsetY').value = 0;
+      updateHeroTransform();
+    }
+
+    function buildSlotManagerUI() {
+      const box = document.getElementById('slotManagerBox');
+      box.innerHTML = '';
+      state.slots.forEach((slot, idx) => {
+        const row = document.createElement('div');
+        row.className = 'flex items-center gap-2 bg-slate-50 p-1.5 rounded-lg border border-slate-100';
+        row.innerHTML = `
+          <button type="button" onclick="triggerSlotUpload(${idx})" class="px-2 py-1 bg-rose-100 hover:bg-rose-200 text-rose-700 rounded-md text-[10px] font-extrabold shrink-0 cursor-pointer">📷 #${idx + 1}</button>
+          <input type="text" value="${slot.label}" oninput="updateSlotLabel(${idx}, this.value)" class="w-24 px-1.5 py-0.5 text-[11px] font-bold bg-white border border-slate-200 rounded-md uppercase">
+          <div class="flex-1 flex items-center gap-1">
+            <span class="text-[9px] text-slate-400 shrink-0">Dọc:</span>
+            <input type="range" min="-40" max="40" value="0" oninput="updateSlotFocusY(${idx}, this.value)" class="w-full h-1 bg-rose-200 rounded-lg cursor-pointer">
+          </div>
+        `;
+        box.appendChild(row);
+      });
+    }
+
+    function toggleSlotManager() {
+      const box = document.getElementById('slotManagerBox');
+      const icon = document.getElementById('slotManagerIcon');
+      const isHidden = box.classList.contains('hidden');
+      box.classList.toggle('hidden');
+      icon.textContent = isHidden ? '▲' : '▼';
+    }
+
+    function triggerSlotUpload(idx) {
+      state.activeSlotIndex = idx;
+      document.getElementById('singleSlotInput').click();
+    }
+
+    function updateSlotLabel(idx, val) {
+      state.slots[idx].label = val;
+      scheduleRender();
+    }
+
+    function updateSlotFocusY(idx, val) {
+      state.slots[idx].focusY = parseInt(val, 10);
+      scheduleRender();
+    }
+
+    // Dữ liệu minh họa nghệ thuật vẽ bằng Canvas Vector ngay khi mở trang
+    function loadArtisticDemoData(notify = true) {
+      const createCuteIllustration = (monthNum, isHero = false) => {
+        const c = document.createElement('canvas');
+        c.width = isHero ? 800 : 420;
+        c.height = isHero ? 800 : 420;
+        const ctx = c.getContext('2d');
+
+        const bgPairs = [
+          ['#ffe4e6', '#fecdd3', '#fb7185'],
+          ['#fef3c7', '#fde68a', '#f59e0b'],
+          ['#e0f2fe', '#bae6fd', '#0ea5e9'],
+          ['#dcfce7', '#bbf7d0', '#22c55e'],
+          ['#f3e8ff', '#e9d5ff', '#a855f7'],
+          ['#ffedd5', '#fed7aa', '#f97316']
+        ];
+        const pal = bgPairs[monthNum % bgPairs.length];
+
+        const g = ctx.createLinearGradient(0, 0, c.width, c.height);
+        g.addColorStop(0, pal[0]);
+        g.addColorStop(1, pal[1]);
+        ctx.fillStyle = g;
+        ctx.fillRect(0, 0, c.width, c.height);
+
+        // Chấm bi & vòng tròn bokeh dễ thương
+        ctx.fillStyle = 'rgba(255,255,255,0.45)';
+        ctx.beginPath();
+        ctx.arc(c.width * 0.22, c.height * 0.25, c.width * 0.14, 0, Math.PI * 2);
+        ctx.arc(c.width * 0.8, c.height * 0.78, c.width * 0.18, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Vẽ khuôn mặt gấu/bé chibi minh họa đáng yêu ở giữa
+        const cx = c.width / 2;
+        const cy = c.height * 0.46;
+        const r = isHero ? 140 : 76;
+
+        // Tai gấu
+        ctx.fillStyle = '#d99b66';
+        ctx.beginPath();
+        ctx.arc(cx - r * 0.78, cy - r * 0.72, r * 0.36, 0, Math.PI * 2);
+        ctx.arc(cx + r * 0.78, cy - r * 0.72, r * 0.36, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Mặt
+        ctx.fillStyle = '#f3c69f';
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Má hồng
+        ctx.fillStyle = 'rgba(244, 63, 94, 0.28)';
+        ctx.beginPath();
+        ctx.arc(cx - r * 0.48, cy + r * 0.15, r * 0.18, 0, Math.PI * 2);
+        ctx.arc(cx + r * 0.48, cy + r * 0.15, r * 0.18, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Mắt & nụ cười
+        ctx.fillStyle = '#334155';
+        ctx.beginPath();
+        ctx.arc(cx - r * 0.32, cy - r * 0.05, r * 0.08, 0, Math.PI * 2);
+        ctx.arc(cx + r * 0.32, cy - r * 0.05, r * 0.08, 0, Math.PI * 2);
+        ctx.fill();
+
+        ctx.strokeStyle = '#334155';
+        ctx.lineWidth = isHero ? 8 : 4.5;
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        ctx.arc(cx, cy + r * 0.12, r * 0.22, 0.15 * Math.PI, 0.85 * Math.PI);
+        ctx.stroke();
+
+        // Nhãn dưới ảnh mẫu
+        ctx.fillStyle = pal[2];
+        ctx.font = `800 ${isHero ? 36 : 26}px Quicksand, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(isHero ? 'ẢNH CHÍNH CỦA BÉ' : `Kỷ niệm ${monthNum} tháng`, cx, c.height * 0.83);
+
+        const img = new Image();
+        img.src = c.toDataURL();
+        return img;
+      };
+
+      const heroDemo = createCuteIllustration(0, true);
+      heroDemo.onload = () => {
+        state.heroImage = heroDemo;
+        scheduleRender();
+      };
+
+      state.slots.forEach((slot, idx) => {
+        const demo = createCuteIllustration(idx + 1, false);
+        demo.onload = () => {
+          slot.image = demo;
+          updateUploadedCounter();
+          scheduleRender();
+        };
+      });
+
+      if (notify) showToast('Đã nạp lại bộ ảnh minh họa nghệ thuật!', '🧸');
+    }
+
+    // =========================================================================
+    // TƯƠNG TÁC CLICK / HOVER TRỰC TIẾP TRÊN CANVAS
+    // =========================================================================
+    function setupCanvasInteractions() {
+      const canvas = document.getElementById('previewCanvas');
+      const hint = document.getElementById('hoverHint');
+
+      function getCoords(e) {
+        const rect = canvas.getBoundingClientRect();
+        const cx = e.touches ? e.touches[0].clientX : e.clientX;
+        const cy = e.touches ? e.touches[0].clientY : e.clientY;
+        return {
+          x: ((cx - rect.left) / rect.width) * BASE_WIDTH,
+          y: ((cy - rect.top) / rect.height) * BASE_HEIGHT,
+          relX: cx - rect.left,
+          relY: cy - rect.top
+        };
+      }
+
+      canvas.addEventListener('mousemove', (e) => {
+        const { x, y, relX, relY } = getCoords(e);
+        const hit = state.hitRegions.find(r => x >= r.x && x <= r.x + r.w && y >= r.y && y <= r.y + r.h);
+        if (hit) {
+          canvas.style.cursor = 'pointer';
+          hint.textContent = hit.type === 'hero' ? '🖼️ Bấm đổi Ảnh Chính Lớn' : `📸 Bấm đổi ảnh ${state.slots[hit.index].label}`;
+          hint.style.left = `${Math.min(relX + 12, canvas.clientWidth - 190)}px`;
+          hint.style.top = `${Math.max(relY - 34, 8)}px`;
+          hint.classList.remove('hidden');
+        } else {
+          canvas.style.cursor = 'default';
+          hint.classList.add('hidden');
+        }
+      });
+
+      canvas.addEventListener('mouseleave', () => hint.classList.add('hidden'));
+
+      canvas.addEventListener('click', (e) => {
+        const { x, y } = getCoords(e);
+        const hit = state.hitRegions.find(r => x >= r.x && x <= r.x + r.w && y >= r.y && y <= r.y + r.h);
+        if (!hit) return;
+        if (hit.type === 'hero') {
+          document.getElementById('heartInput').click();
+        } else {
+          triggerSlotUpload(hit.index);
+        }
+      });
+    }
+
+    // =========================================================================
+    // ĐỘNG CƠ VẼ CANVAS 2D ĐA CHỦ ĐỀ (5 CONCEPTS CHUẨN IN ẤN)
+    // =========================================================================
+    function renderDesign(canvas, scale = 1, isExport = false) {
+      const ctx = canvas.getContext('2d');
+      const P = getActivePalette();
+      const concept = state.concept;
+      const regions = [];
+
+      ctx.save();
+      ctx.scale(scale, scale);
+
+      // 1. VẼ NỀN THEO CHỦ ĐỀ & BẢNG MÀU
+      drawThemedBackground(ctx, concept, P);
+
+      // 2. VẼ HỌA TIẾT TRANG TRÍ LỚP DƯỚI (BUNTING, DẢI NGÂN HÀ, RÈM NHUNG, CẦU VỒNG...)
+      drawConceptBackDecorations(ctx, concept, P);
+
+      // 3. VẼ KHUNG ẢNH CHÍNH LỚN Ở PHÍA TRÊN THEO HÌNH DÁNG CHỦ ĐỀ
+      const heroBox = { cx: BASE_WIDTH / 2, topY: 54, w: 430, h: 400 };
+      drawThemedHeroFrame(ctx, concept, P, heroBox);
+      regions.push({
+        type: 'hero',
+        x: heroBox.cx - heroBox.w / 2,
+        y: heroBox.topY,
+        w: heroBox.w,
+        h: heroBox.h
+      });
+
+      // 4. VẼ 24 KHUNG ẢNH THÁNG (3 TRÁI + 3 PHẢI + 3 HÀNG x 6 Ô DƯỚI = 24 Ô)
+      const sideSlotW = 148;
+      const sideSlotH = state.frameStyle === 'polaroid' ? 164 : 148;
+      const sideStartY = 342;
+      const sideGapY = 178;
+      const leftColX = 108;
+      const rightColX = BASE_WIDTH - 108 - sideSlotW;
+
+      // Cột trái: Tháng 1, 2, 3
+      for (let i = 0; i < 3; i++) {
+        const sy = sideStartY + i * sideGapY;
+        drawThemedMonthSlot(ctx, leftColX, sy, sideSlotW, sideSlotH, state.slots[i], concept, P);
+        regions.push({ type: 'slot', index: i, x: leftColX, y: sy, w: sideSlotW, h: sideSlotH });
+      }
+
+      // Cột phải: Tháng 4, 5, 6
+      for (let i = 0; i < 3; i++) {
+        const sy = sideStartY + i * sideGapY;
+        const idx = i + 3;
+        drawThemedMonthSlot(ctx, rightColX, sy, sideSlotW, sideSlotH, state.slots[idx], concept, P);
+        regions.push({ type: 'slot', index: idx, x: rightColX, y: sy, w: sideSlotW, h: sideSlotH });
+      }
+
+      // 3 hàng dưới: Tháng 7 -> Tháng 24 (6 cột x 3 hàng = 18 ô)
+      const cols = 6;
+      const rows = 3;
+      const marginX = 54;
+      const gapX = 16;
+      const gridSlotW = (BASE_WIDTH - marginX * 2 - gapX * (cols - 1)) / cols;
+      const gridSlotH = state.frameStyle === 'polaroid' ? gridSlotW * 1.12 : gridSlotW;
+      const gridStartY = 895;
+      const gridGapY = 192;
+
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const idx = 6 + r * cols + c;
+          const gx = marginX + c * (gridSlotW + gapX);
+          const gy = gridStartY + r * gridGapY;
+          drawThemedMonthSlot(ctx, gx, gy, gridSlotW, gridSlotH, state.slots[idx], concept, P);
+          regions.push({ type: 'slot', index: idx, x: gx, y: gy, w: gridSlotW, h: gridSlotH });
+        }
+      }
+
+      // 5. VẼ CHỮ TRUNG TÂM (TIÊU ĐỀ PHỤ, TÊN BÉ 2 DÒNG 3D, BIỆT DANH, NGÀY SINH)
+      drawCenterTypography(ctx, concept, P);
+
+      // 6. VẼ HỌA TIẾT TRANG TRÍ LỚP TRÊN (TIM 3D, TÊN LỬA, BƯỚM, PHÁO GIẤY...)
+      drawConceptFrontDecorations(ctx, concept, P);
+
+      ctx.restore();
+
+      if (!isExport) {
+        state.hitRegions = regions;
+      }
+    }
+
+    // =========================================================================
+    // 1. NỀN THEO CHỦ ĐỀ
+    // =========================================================================
+    function drawThemedBackground(ctx, concept, P) {
+      const bgGrad = ctx.createLinearGradient(0, 0, 0, BASE_HEIGHT);
+      bgGrad.addColorStop(0, P.bgTop);
+      bgGrad.addColorStop(0.5, P.bgMid);
+      bgGrad.addColorStop(1, P.bgBot);
+      ctx.fillStyle = bgGrad;
+      ctx.fillRect(0, 0, BASE_WIDTH, BASE_HEIGHT);
+
+      if (concept === 'circus') {
+        // Sọc dọc pastel thanh lịch kiểu rạp xiếc cổ điển
+        const stripeCount = 16;
+        const stripeW = BASE_WIDTH / stripeCount;
+        ctx.fillStyle = P.isDark ? 'rgba(255,255,255,0.04)' : 'rgba(255,255,255,0.45)';
+        for (let i = 0; i < stripeCount; i += 2) {
+          ctx.fillRect(i * stripeW, 0, stripeW, BASE_HEIGHT);
+        }
+      } else if (concept === 'astronaut') {
+        // Dải ngân hà phát sáng chéo & hàng trăm ngôi sao lấp lánh
+        ctx.save();
+        const neb = ctx.createRadialGradient(500, 500, 60, 500, 500, 650);
+        neb.addColorStop(0, P.softTint);
+        neb.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = neb;
+        ctx.fillRect(0, 0, BASE_WIDTH, BASE_HEIGHT);
+
+        // Chấm sao ngẫu nhiên cố định theo tọa độ toán học
+        for (let i = 0; i < 95; i++) {
+          const sx = (i * 197 + 43) % BASE_WIDTH;
+          const sy = (i * 311 + 79) % BASE_HEIGHT;
+          const sr = (i % 3) + 1.2;
+          ctx.fillStyle = i % 4 === 0 ? '#fde68a' : 'rgba(255,255,255,0.75)';
+          ctx.beginPath();
+          ctx.arc(sx, sy, sr, 0, Math.PI * 2);
+          ctx.fill();
+        }
+        ctx.restore();
+      } else {
+        // Mây loang màu nước dịu nhẹ cho SweetHeart, Teddy, Daisy
+        const blobs = [
+          { x: 160, y: 140, r: 260, c: 'rgba(255,255,255,0.72)' },
+          { x: 850, y: 180, r: 280, c: 'rgba(255,255,255,0.72)' },
+          { x: 110, y: 560, r: 240, c: P.softTint },
+          { x: 900, y: 600, r: 250, c: P.softTint },
+          { x: 500, y: 680, r: 350, c: 'rgba(255,255,255,0.78)' },
+          { x: 180, y: 1120, r: 280, c: P.softTint },
+          { x: 840, y: 1160, r: 290, c: P.softTint }
+        ];
+        blobs.forEach(b => {
+          const g = ctx.createRadialGradient(b.x, b.y, b.r * 0.1, b.x, b.y, b.r);
+          g.addColorStop(0, b.c);
+          g.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.fillStyle = g;
+          ctx.beginPath();
+          ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+          ctx.fill();
+        });
+      }
+    }
+
+    // =========================================================================
+    // 2. HỌA TIẾT TRANG TRÍ PHÍA SAU KHUNG CHÍNH
+    // =========================================================================
+    function drawConceptBackDecorations(ctx, concept, P) {
+      if (concept === 'sweetheart') {
+        // 4 trái tim treo dây từ mép trên
+        drawHangingHeart(ctx, 82, 285, 40, P);
+        drawHangingHeart(ctx, 175, 190, 44, P);
+        drawHangingHeart(ctx, 825, 190, 44, P);
+        drawHangingHeart(ctx, 918, 285, 40, P);
+      } else if (concept === 'teddy') {
+        // Dải cờ tam giác (Bunting) treo cong 2 bên góc trên & khinh khí cầu
+        drawBuntingGarland(ctx, 0, 20, 310, 210, P);
+        drawBuntingGarland(ctx, BASE_WIDTH, 20, 690, 210, P);
+        drawHotAirBalloon(ctx, 130, 185, 58, P);
+        drawHotAirBalloon(ctx, 870, 185, 58, P);
+      } else if (concept === 'astronaut') {
+        // Quỹ đạo hành tinh vòng quanh khung chính + Mặt trăng lưỡi liềm + Sao Thổ
+        ctx.save();
+        ctx.strokeStyle = 'rgba(255,255,255,0.28)';
+        ctx.lineWidth = 2.5;
+        ctx.setLineDash([8, 8]);
+        ctx.beginPath();
+        ctx.ellipse(500, 255, 290, 110, -0.18, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.restore();
+
+        drawCrescentMoon(ctx, 135, 165, 56, '#fde68a');
+        drawSaturnPlanet(ctx, 865, 185, 54, P);
+      } else if (concept === 'daisy') {
+        // Cầu vồng pastel 2 bên & lá botanical
+        drawPastelRainbow(ctx, 135, 225, 92, P);
+        drawPastelRainbow(ctx, 865, 225, 92, P);
+      } else if (concept === 'circus') {
+        // Rèm nhung rạp xiếc rủ sang trọng hai góc trên
+        drawCircusCurtains(ctx, P);
+      }
+    }
+
+    // =========================================================================
+    // 3. KHUNG ẢNH CHÍNH ĐA HÌNH DÁNG THEO 5 CHỦ ĐỀ
+    // =========================================================================
+    function drawThemedHeroFrame(ctx, concept, P, box) {
+      const { cx, topY, w, h } = box;
+      const cy = topY + h / 2;
+
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.14)';
+      ctx.shadowBlur = 24;
+      ctx.shadowOffsetY = 10;
+
+      // Vẽ tai gấu phía sau nếu là chủ đề Teddy
+      if (concept === 'teddy') {
+        const earR = 56;
+        const earY = topY + 62;
+        [cx - 135, cx + 135].forEach(ex => {
+          ctx.beginPath();
+          ctx.arc(ex, earY, earR, 0, Math.PI * 2);
+          ctx.fillStyle = P.accent2;
+          ctx.fill();
+          ctx.lineWidth = 6;
+          ctx.strokeStyle = '#ffffff';
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.arc(ex, earY, earR * 0.56, 0, Math.PI * 2);
+          ctx.fillStyle = P.bgTop;
+          ctx.fill();
+        });
+      }
+
+      // Tạo đường path clip theo từng chủ đề
+      if (concept === 'sweetheart') {
+        createHeartPath(ctx, cx, topY, w, h);
+      } else if (concept === 'teddy') {
+        createArchPath(ctx, cx - w * 0.44, topY + 12, w * 0.88, h - 18);
+      } else if (concept === 'astronaut') {
+        ctx.beginPath();
+        ctx.arc(cx, cy, w * 0.46, 0, Math.PI * 2);
+        ctx.closePath();
+      } else if (concept === 'daisy') {
+        createFlowerPath(ctx, cx, cy, w * 0.48, 12);
+      } else if (concept === 'circus') {
+        createScallopedBadgePath(ctx, cx, cy, w * 0.47, 16);
+      }
+
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+      ctx.shadowColor = 'transparent';
+
+      // Clip và vẽ ảnh chính của bé
+      ctx.save();
+      ctx.clip();
+      if (state.heroImage) {
+        drawImageTransformed(
+          ctx,
+          state.heroImage,
+          cx - w / 2,
+          topY,
+          w,
+          h,
+          state.heroZoom,
+          state.heroOffsetX * 3,
+          state.heroOffsetY * 3,
+          state.heroRotation
+        );
+      } else {
+        ctx.fillStyle = P.bgTop;
+        ctx.fillRect(cx - w / 2, topY, w, h);
+        ctx.fillStyle = P.accent1;
+        ctx.textAlign = 'center';
+        ctx.font = '800 22px Quicksand, sans-serif';
+        ctx.fillText('BẤM CHỌN ẢNH CHÍNH', cx, cy);
+      }
+      ctx.restore();
+
+      // Viền trang trí đặc trưng của khung chính
+      if (concept === 'sweetheart') {
+        createHeartPath(ctx, cx, topY, w, h);
+        ctx.lineWidth = 7;
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+        // Viền chấm bi ren nhẹ
+        ctx.setLineDash([4, 10]);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = P.accent2;
+        ctx.stroke();
+        ctx.setLineDash([]);
+      } else if (concept === 'teddy') {
+        createArchPath(ctx, cx - w * 0.44, topY + 12, w * 0.88, h - 18);
+        ctx.lineWidth = 8;
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = P.accent2;
+        ctx.stroke();
+      } else if (concept === 'astronaut') {
+        // Vòng kim loại cửa sổ tàu vũ trụ có đinh tán
+        const r = w * 0.46;
+        ctx.beginPath();
+        ctx.arc(cx, cy, r, 0, Math.PI * 2);
+        ctx.lineWidth = 14;
+        ctx.strokeStyle = '#e2e8f0';
+        ctx.stroke();
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = P.accent1;
+        ctx.stroke();
+
+        // 12 đinh tán quanh cửa sổ tàu
+        for (let i = 0; i < 12; i++) {
+          const ang = (i * Math.PI * 2) / 12;
+          ctx.beginPath();
+          ctx.arc(cx + Math.cos(ang) * r, cy + Math.sin(ang) * r, 3.2, 0, Math.PI * 2);
+          ctx.fillStyle = '#64748b';
+          ctx.fill();
+        }
+      } else if (concept === 'daisy') {
+        createFlowerPath(ctx, cx, cy, w * 0.48, 12);
+        ctx.lineWidth = 8;
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = '#facc15';
+        ctx.stroke();
+      } else if (concept === 'circus') {
+        createScallopedBadgePath(ctx, cx, cy, w * 0.47, 16);
+        ctx.lineWidth = 8;
+        ctx.strokeStyle = '#ffffff';
+        ctx.stroke();
+        ctx.lineWidth = 3.5;
+        ctx.strokeStyle = '#f59e0b';
+        ctx.stroke();
+        // Vương miện vàng đội trên đỉnh khung
+        drawRoyalCrown(ctx, cx, topY - 12, 74);
+      }
+
+      ctx.restore();
+    }
+
+    // =========================================================================
+    // 4. VẼ 24 KHUNG ẢNH THÁNG (HỖ TRỢ 3 KIỂU VIỀN: BO GÓC / POLAROID / TEM THƯ)
+    // =========================================================================
+    function drawThemedMonthSlot(ctx, x, y, w, h, slot, concept, P) {
+      const fStyle = state.frameStyle;
+
+      ctx.save();
+      ctx.shadowColor = 'rgba(0, 0, 0, 0.1)';
+      ctx.shadowBlur = 10;
+      ctx.shadowOffsetY = 4;
+
+      if (fStyle === 'polaroid') {
+        // Khung Polaroid trắng cổ điển có phần lề đáy viết chữ tháng
+        roundRectPath(ctx, x, y, w, h, 10);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+
+        const pad = 8;
+        const bottomLabelH = 26;
+        const imgW = w - pad * 2;
+        const imgH = h - pad - bottomLabelH;
+
+        ctx.save();
+        roundRectPath(ctx, x + pad, y + pad, imgW, imgH, 6);
+        ctx.clip();
+        drawSlotPhotoOrPlaceholder(ctx, x + pad, y + pad, imgW, imgH, slot, P);
+        ctx.restore();
+
+        // Chữ tháng viết tay ở đáy thẻ Polaroid
+        ctx.fillStyle = P.isDark ? '#1e293b' : P.darkText;
+        ctx.font = '800 12px Quicksand, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(slot.label, x + w / 2, y + h - bottomLabelH / 2);
+      } else if (fStyle === 'stamp') {
+        // Khung Tem Thư răng cưa cực cute
+        createStampPath(ctx, x, y, w, h, 6);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+
+        const pad = 8;
+        ctx.save();
+        roundRectPath(ctx, x + pad, y + pad, w - pad * 2, h - pad * 2, 6);
+        ctx.clip();
+        drawSlotPhotoOrPlaceholder(ctx, x + pad, y + pad, w - pad * 2, h - pad * 2, slot, P);
+        ctx.restore();
+
+        drawTopPillBadge(ctx, x, y, w, slot.label, concept, P);
+      } else {
+        // Bo góc tròn mềm hiện đại
+        const radius = 20;
+        roundRectPath(ctx, x, y, w, h, radius);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+
+        ctx.save();
+        roundRectPath(ctx, x, y, w, h, radius);
+        ctx.clip();
+        drawSlotPhotoOrPlaceholder(ctx, x, y, w, h, slot, P);
+        ctx.restore();
+
+        roundRectPath(ctx, x, y, w, h, radius);
+        ctx.lineWidth = 3.5;
+        ctx.strokeStyle = P.frameBorder;
+        ctx.stroke();
+
+        drawTopPillBadge(ctx, x, y, w, slot.label, concept, P);
+      }
+
+      ctx.restore();
+    }
+
+    function drawSlotPhotoOrPlaceholder(ctx, x, y, w, h, slot, P) {
+      if (slot.image) {
+        drawImageTransformed(ctx, slot.image, x, y, w, h, 1, 0, slot.focusY * 1.4, 0);
+      } else {
+        ctx.fillStyle = P.isDark ? '#334155' : P.bgTop;
+        ctx.fillRect(x, y, w, h);
+        ctx.strokeStyle = P.frameBorder;
+        ctx.lineWidth = 2.5;
+        const cx = x + w / 2;
+        const cy = y + h / 2;
+        ctx.beginPath();
+        ctx.moveTo(cx - 12, cy);
+        ctx.lineTo(cx + 12, cy);
+        ctx.moveTo(cx, cy - 12);
+        ctx.lineTo(cx, cy + 12);
+        ctx.stroke();
+      }
+    }
+
+    function drawTopPillBadge(ctx, x, y, w, labelText, concept, P) {
+      const text = (labelText || '').trim();
+      if (!text) return;
+
+      const badgeH = 25;
+      ctx.font = '800 12px Montserrat, sans-serif';
+      const textW = ctx.measureText(text).width;
+      const badgeW = Math.max(textW + 22, 80);
+      const bx = x + (w - badgeW) / 2;
+      const by = y - badgeH * 0.56;
+
+      ctx.save();
+      ctx.shadowColor = 'rgba(0,0,0,0.12)';
+      ctx.shadowBlur = 4;
+      ctx.shadowOffsetY = 2;
+
+      if (concept === 'circus') {
+        // Nhãn ruy băng đuôi én hoàng gia
+        ctx.beginPath();
+        ctx.moveTo(bx - 6, by);
+        ctx.lineTo(bx + badgeW + 6, by);
+        ctx.lineTo(bx + badgeW, by + badgeH / 2);
+        ctx.lineTo(bx + badgeW + 6, by + badgeH);
+        ctx.lineTo(bx - 6, by + badgeH);
+        ctx.lineTo(bx, by + badgeH / 2);
+        ctx.closePath();
+      } else {
+        roundRectPath(ctx, bx, by, badgeW, badgeH, badgeH / 2);
+      }
+
+      ctx.fillStyle = P.badgeBg;
+      ctx.fill();
+      ctx.shadowColor = 'transparent';
+      ctx.lineWidth = 2;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+
+      ctx.fillStyle = P.badgeText;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text, bx + badgeW / 2, by + badgeH / 2 + 0.5);
+      ctx.restore();
+    }
+
+    // =========================================================================
+    // 5. CHỮ TRUNG TÂM (TYPOGRAPHY 3D CHUẨN IN ẤN)
+    // =========================================================================
+    function drawCenterTypography(ctx, concept, P) {
+      const cx = BASE_WIDTH / 2;
+      const maxW = 415;
+
+      const subtitle = document.getElementById('inputSubtitle').value.trim();
+      const line1 = document.getElementById('inputNameLine1').value.trim().toUpperCase();
+      const line2 = document.getElementById('inputNameLine2').value.trim().toUpperCase();
+      const nickname = document.getElementById('inputNickname').value.trim();
+      const birthDate = document.getElementById('inputBirthDate').value.trim();
+
+      ctx.save();
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+
+      // 1. Dòng phụ trên
+      if (subtitle) {
+        ctx.font = 'italic 700 31px "Playfair Display", Georgia, serif';
+        ctx.fillStyle = P.isDark ? '#fde68a' : P.darkText;
+        ctx.fillText(subtitle, cx, 526, maxW);
+      }
+
+      // Hàm vẽ chữ tên bé 3D viền trắng nổi bật
+      const drawNameLine = (text, yPos) => {
+        if (!text) return;
+        let fSize = 54;
+        const fontFamily = (concept === 'teddy' || concept === 'daisy') ? '"Baloo 2", Montserrat' : 'Montserrat';
+        ctx.font = `900 ${fSize}px ${fontFamily}, sans-serif`;
+        while (ctx.measureText(text).width > maxW && fSize > 30) {
+          fSize -= 2;
+          ctx.font = `900 ${fSize}px ${fontFamily}, sans-serif`;
+        }
+
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = P.nameShadow;
+        ctx.strokeText(text, cx, yPos + 4);
+
+        ctx.lineWidth = 9;
+        ctx.strokeStyle = '#ffffff';
+        ctx.strokeText(text, cx, yPos);
+
+        ctx.fillStyle = P.nameFill;
+        ctx.fillText(text, cx, yPos);
+      };
+
+      drawNameLine(line1, 596);
+      drawNameLine(line2, 668);
+
+      // 3. Biệt danh chữ viết tay bay bổng
+      if (nickname) {
+        let sSize = 74;
+        ctx.font = `700 ${sSize}px "Dancing Script", Pacifico, cursive`;
+        while (ctx.measureText(nickname).width > maxW && sSize > 40) {
+          sSize -= 2;
+          ctx.font = `700 ${sSize}px "Dancing Script", Pacifico, cursive`;
+        }
+
+        ctx.lineJoin = 'round';
+        ctx.lineWidth = 7;
+        ctx.strokeStyle = '#ffffff';
+        ctx.strokeText(nickname, cx, 752);
+
+        ctx.fillStyle = P.isDark ? '#fbbf24' : P.accent1;
+        ctx.fillText(nickname, cx, 752);
+      }
+
+      // 4. Dòng ngày sinh / lời chúc nhỏ dưới biệt danh
+      if (birthDate) {
+        const pillY = 824;
+        ctx.font = '700 15px Quicksand, sans-serif';
+        const tw = Math.min(ctx.measureText(birthDate).width + 32, maxW);
+        roundRectPath(ctx, cx - tw / 2, pillY - 15, tw, 30, 15);
+        ctx.fillStyle = P.isDark ? 'rgba(255,255,255,0.14)' : 'rgba(255,255,255,0.85)';
+        ctx.fill();
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = P.frameBorder;
+        ctx.stroke();
+
+        ctx.fillStyle = P.isDark ? '#fde68a' : P.darkText;
+        ctx.fillText(birthDate, cx, pillY + 0.5, maxW - 20);
+      }
+
+      ctx.restore();
+    }
+
+    // =========================================================================
+    // 6. HỌA TIẾT TRANG TRÍ LỚP TRÊN THEO 5 CHỦ ĐỀ
+    // =========================================================================
+    function drawConceptFrontDecorations(ctx, concept, P) {
+      if (concept === 'sweetheart') {
+        drawFloating3DHeart(ctx, 336, 488, 28, -0.25, P);
+        drawFloating3DHeart(ctx, 632, 515, 15, 0.2, P);
+        drawFloating3DHeart(ctx, 682, 785, 34, 0.18, P);
+        drawFloating3DHeart(ctx, 48, 975, 25, -0.3, P);
+        drawFloating3DHeart(ctx, 954, 600, 28, 0.25, P);
+      } else if (concept === 'teddy') {
+        // Chùm bóng bay pastel & ngôi sao 4 cánh
+        drawPastelBalloonsCluster(ctx, 325, 495, P);
+        drawFourPointStar(ctx, 655, 515, 18, '#fbbf24');
+        drawFourPointStar(ctx, 685, 780, 26, '#f59e0b');
+        drawFourPointStar(ctx, 945, 580, 22, '#fbbf24');
+      } else if (concept === 'astronaut') {
+        // Tên lửa nhí cất cánh & các ngôi sao vàng
+        drawCuteRocket(ctx, 325, 495, 46, -0.5, P);
+        drawFourPointStar(ctx, 660, 515, 20, '#fde68a');
+        drawFourPointStar(ctx, 685, 780, 28, '#fbbf24');
+        drawFourPointStar(ctx, 50, 960, 22, '#fde68a');
+        drawFourPointStar(ctx, 950, 610, 24, '#fbbf24');
+      } else if (concept === 'daisy') {
+        // Hoa cúc họa mi & bướm xinh
+        drawDaisyFlower(ctx, 330, 492, 26);
+        drawDaisyFlower(ctx, 682, 782, 32);
+        drawDaisyFlower(ctx, 48, 970, 24);
+        drawCuteButterfly(ctx, 645, 515, 22, P);
+        drawCuteButterfly(ctx, 950, 595, 24, P);
+      } else if (concept === 'circus') {
+        // Pháo giấy confetti & ngôi sao ánh kim
+        const confettiColors = ['#fbbf24', '#f43f5e', '#38bdf8', '#a855f7', '#34d399'];
+        const pts = [
+          [320, 485], [355, 510], [645, 505], [675, 535], [685, 775],
+          [315, 785], [45, 960], [955, 585], [950, 940], [290, 220], [710, 220]
+        ];
+        pts.forEach(([px, py], i) => {
+          ctx.save();
+          ctx.translate(px, py);
+          ctx.rotate(i * 0.7);
+          ctx.fillStyle = confettiColors[i % confettiColors.length];
+          ctx.fillRect(-7, -4, 14, 8);
+          ctx.restore();
+        });
+      }
+    }
+
+    // =========================================================================
+    // CÁC HÀM VẼ HÌNH HỌC & VECTOR CHI TIẾT
+    // =========================================================================
+    function createHeartPath(ctx, cx, topY, w, h) {
+      ctx.beginPath();
+      const topCurve = h * 0.3;
+      ctx.moveTo(cx, topY + topCurve);
+      ctx.bezierCurveTo(cx, topY, cx - w / 2, topY, cx - w / 2, topY + topCurve);
+      ctx.bezierCurveTo(cx - w / 2, topY + (h + topCurve) / 2, cx, topY + (h + topCurve) / 1.38, cx, topY + h);
+      ctx.bezierCurveTo(cx, topY + (h + topCurve) / 1.38, cx + w / 2, topY + (h + topCurve) / 2, cx + w / 2, topY + topCurve);
+      ctx.bezierCurveTo(cx + w / 2, topY, cx, topY, cx, topY + topCurve);
+      ctx.closePath();
+    }
+
+    function createArchPath(ctx, x, y, w, h) {
+      const r = w / 2;
+      ctx.beginPath();
+      ctx.moveTo(x, y + r);
+      ctx.arc(x + r, y + r, r, Math.PI, 0, false);
+      ctx.lineTo(x + w, y + h - 24);
+      ctx.quadraticCurveTo(x + w, y + h, x + w - 24, y + h);
+      ctx.lineTo(x + 24, y + h);
+      ctx.quadraticCurveTo(x, y + h, x, y + h - 24);
+      ctx.closePath();
+    }
+
+    function createFlowerPath(ctx, cx, cy, outerR, petals) {
+      ctx.beginPath();
+      const innerR = outerR * 0.84;
+      const steps = petals * 2;
+      for (let i = 0; i <= steps; i++) {
+        const ang = (i * Math.PI * 2) / steps;
+        const r = i % 2 === 0 ? outerR : innerR;
+        const px = cx + Math.cos(ang) * r;
+        const py = cy + Math.sin(ang) * r;
+        if (i === 0) ctx.moveTo(px, py);
+        else {
+          const prevAng = ((i - 0.5) * Math.PI * 2) / steps;
+          const cpR = outerR * 1.04;
+          ctx.quadraticCurveTo(cx + Math.cos(prevAng) * cpR, cy + Math.sin(prevAng) * cpR, px, py);
+        }
+      }
+      ctx.closePath();
+    }
+
+    function createScallopedBadgePath(ctx, cx, cy, r, waves) {
+      ctx.beginPath();
+      const total = waves * 2;
+      for (let i = 0; i <= total; i++) {
+        const ang = (i * Math.PI * 2) / total;
+        const rad = i % 2 === 0 ? r : r * 0.93;
+        const px = cx + Math.cos(ang) * rad;
+        const py = cy + Math.sin(ang) * rad;
+        if (i === 0) ctx.moveTo(px, py);
+        else ctx.lineTo(px, py);
+      }
+      ctx.closePath();
+    }
+
+    function createStampPath(ctx, x, y, w, h, notchR) {
+      ctx.beginPath();
+      ctx.moveTo(x, y);
+      const step = notchR * 3.2;
+      for (let px = x + step; px < x + w - notchR; px += step) {
+        ctx.lineTo(px - notchR, y);
+        ctx.arc(px, y, notchR, Math.PI, 0, true);
+      }
+      ctx.lineTo(x + w, y);
+      for (let py = y + step; py < y + h - notchR; py += step) {
+        ctx.lineTo(x + w, py - notchR);
+        ctx.arc(x + w, py, notchR, -Math.PI / 2, Math.PI / 2, true);
+      }
+      ctx.lineTo(x + w, y + h);
+      for (let px = x + w - step; px > x + notchR; px -= step) {
+        ctx.lineTo(px + notchR, y + h);
+        ctx.arc(px, y + h, notchR, 0, Math.PI, true);
+      }
+      ctx.lineTo(x, y + h);
+      for (let py = y + h - step; py > y + notchR; py -= step) {
+        ctx.lineTo(x, py + notchR);
+        ctx.arc(x, py, notchR, Math.PI / 2, -Math.PI / 2, true);
+      }
+      ctx.closePath();
+    }
+
+    function drawHangingHeart(ctx, cx, cy, size, P) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(cx, 0);
+      ctx.lineTo(cx, cy - size * 0.4);
+      ctx.lineWidth = 2.2;
+      ctx.strokeStyle = P.accent1;
+      ctx.stroke();
+
+      ctx.shadowColor = 'rgba(0,0,0,0.18)';
+      ctx.shadowBlur = 12;
+      ctx.shadowOffsetY = 6;
+
+      const w = size * 2.1;
+      const h = size * 1.95;
+      const topY = cy - h * 0.48;
+      createHeartPath(ctx, cx, topY, w, h);
+
+      const grad = ctx.createRadialGradient(cx - w * 0.18, topY + h * 0.25, 4, cx, topY + h * 0.5, w * 0.65);
+      grad.addColorStop(0, P.accent3);
+      grad.addColorStop(0.55, P.accent1);
+      grad.addColorStop(1, P.nameShadow);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawFloating3DHeart(ctx, cx, cy, size, angle, P) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(angle);
+      ctx.shadowColor = 'rgba(0,0,0,0.14)';
+      ctx.shadowBlur = 8;
+      ctx.shadowOffsetY = 4;
+
+      const w = size * 2.1;
+      const h = size * 1.95;
+      createHeartPath(ctx, 0, -h / 2, w, h);
+      const grad = ctx.createRadialGradient(-w * 0.2, -h * 0.25, 3, 0, 0, w * 0.7);
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(0.5, P.accent3);
+      grad.addColorStop(1, P.accent2);
+      ctx.fillStyle = grad;
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawBuntingGarland(ctx, x1, y1, x2, y2, P) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      const cpx = (x1 + x2) / 2;
+      const cpy = Math.max(y1, y2) + 45;
+      ctx.quadraticCurveTo(cpx, cpy, x2, y2);
+      ctx.lineWidth = 2.5;
+      ctx.strokeStyle = P.accent1;
+      ctx.stroke();
+
+      const flags = 7;
+      const colors = [P.accent1, P.accent2, P.accent3, '#ffffff'];
+      for (let i = 1; i < flags; i++) {
+        const t = i / flags;
+        const bx = (1 - t) * (1 - t) * x1 + 2 * (1 - t) * t * cpx + t * t * x2;
+        const by = (1 - t) * (1 - t) * y1 + 2 * (1 - t) * t * cpy + t * t * y2;
+        ctx.beginPath();
+        ctx.moveTo(bx - 13, by);
+        ctx.lineTo(bx + 13, by);
+        ctx.lineTo(bx, by + 26);
+        ctx.closePath();
+        ctx.fillStyle = colors[i % colors.length];
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+
+    function drawHotAirBalloon(ctx, cx, cy, r, P) {
+      ctx.save();
+      // Giỏ mây
+      ctx.fillStyle = '#b45309';
+      roundRectPath(ctx, cx - r * 0.24, cy + r * 1.15, r * 0.48, r * 0.34, 5);
+      ctx.fill();
+      // Dây nối
+      ctx.strokeStyle = '#92400e';
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(cx - r * 0.22, cy + r * 0.85);
+      ctx.lineTo(cx - r * 0.18, cy + r * 1.15);
+      ctx.moveTo(cx + r * 0.22, cy + r * 0.85);
+      ctx.lineTo(cx + r * 0.18, cy + r * 1.15);
+      ctx.stroke();
+
+      // Quả cầu khinh khí cầu
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, Math.PI * 0.85, Math.PI * 0.15, false);
+      ctx.lineTo(cx + r * 0.32, cy + r * 0.9);
+      ctx.lineTo(cx - r * 0.32, cy + r * 0.9);
+      ctx.closePath();
+      ctx.fillStyle = P.accent2;
+      ctx.fill();
+
+      // Sọc trắng giữa khinh khí cầu
+      ctx.beginPath();
+      ctx.ellipse(cx, cy, r * 0.42, r * 0.95, 0, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawPastelBalloonsCluster(ctx, cx, cy, P) {
+      const balloons = [
+        { dx: -16, dy: 0, r: 22, c: P.accent2 },
+        { dx: 16, dy: 6, r: 20, c: P.accent3 },
+        { dx: 0, dy: -18, r: 23, c: '#ffffff' }
+      ];
+      ctx.save();
+      balloons.forEach(b => {
+        ctx.beginPath();
+        ctx.moveTo(cx + b.dx, cy + b.dy + b.r);
+        ctx.quadraticCurveTo(cx, cy + 55, cx + 4, cy + 75);
+        ctx.strokeStyle = P.accent1;
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.ellipse(cx + b.dx, cy + b.dy, b.r * 0.86, b.r, 0, 0, Math.PI * 2);
+        ctx.fillStyle = b.c;
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = P.accent2;
+        ctx.stroke();
+      });
+      ctx.restore();
+    }
+
+    function drawCrescentMoon(ctx, cx, cy, r, color) {
+      ctx.save();
+      ctx.shadowColor = 'rgba(253, 230, 138, 0.5)';
+      ctx.shadowBlur = 16;
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.arc(cx, cy, r, 0.2 * Math.PI, 1.8 * Math.PI);
+      ctx.arc(cx + r * 0.45, cy - r * 0.2, r * 0.82, 1.65 * Math.PI, 0.35 * Math.PI, true);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawSaturnPlanet(ctx, cx, cy, r, P) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(-0.35);
+      ctx.fillStyle = P.accent2;
+      ctx.beginPath();
+      ctx.arc(0, 0, r * 0.65, 0, Math.PI * 2);
+      ctx.fill();
+
+      ctx.strokeStyle = '#fde68a';
+      ctx.lineWidth = 6;
+      ctx.beginPath();
+      ctx.ellipse(0, 0, r * 1.25, r * 0.32, 0, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawCuteRocket(ctx, cx, cy, size, angle, P) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(angle);
+      // Lửa đuôi
+      ctx.fillStyle = '#f59e0b';
+      ctx.beginPath();
+      ctx.moveTo(-size * 0.22, size * 0.5);
+      ctx.lineTo(0, size * 0.95);
+      ctx.lineTo(size * 0.22, size * 0.5);
+      ctx.closePath();
+      ctx.fill();
+
+      // Thân tên lửa
+      ctx.fillStyle = '#ffffff';
+      ctx.beginPath();
+      ctx.ellipse(0, 0, size * 0.36, size * 0.65, 0, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.lineWidth = 2.5;
+      ctx.strokeStyle = P.accent1;
+      ctx.stroke();
+
+      // Cửa sổ tròn
+      ctx.fillStyle = P.accent2;
+      ctx.beginPath();
+      ctx.arc(0, -size * 0.1, size * 0.16, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawPastelRainbow(ctx, cx, cy, r, P) {
+      ctx.save();
+      const colors = [P.accent1, P.accent2, P.accent3, '#fde68a'];
+      colors.forEach((c, idx) => {
+        ctx.beginPath();
+        ctx.arc(cx, cy, r - idx * 11, Math.PI, 0, false);
+        ctx.lineWidth = 9;
+        ctx.strokeStyle = c;
+        ctx.lineCap = 'round';
+        ctx.stroke();
+      });
+      ctx.restore();
+    }
+
+    function drawDaisyFlower(ctx, cx, cy, r) {
+      ctx.save();
+      const petals = 10;
+      ctx.fillStyle = '#ffffff';
+      ctx.shadowColor = 'rgba(0,0,0,0.1)';
+      ctx.shadowBlur = 6;
+      for (let i = 0; i < petals; i++) {
+        const ang = (i * Math.PI * 2) / petals;
+        ctx.save();
+        ctx.translate(cx, cy);
+        ctx.rotate(ang);
+        ctx.beginPath();
+        ctx.ellipse(0, -r * 0.65, r * 0.24, r * 0.45, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+      ctx.shadowColor = 'transparent';
+      ctx.fillStyle = '#facc15';
+      ctx.beginPath();
+      ctx.arc(cx, cy, r * 0.34, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function drawCuteButterfly(ctx, cx, cy, size, P) {
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.rotate(0.25);
+      ctx.fillStyle = P.accent3;
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      [-1, 1].forEach(dir => {
+        ctx.beginPath();
+        ctx.ellipse(dir * size * 0.45, -size * 0.2, size * 0.48, size * 0.34, dir * 0.3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.ellipse(dir * size * 0.38, size * 0.28, size * 0.36, size * 0.26, -dir * 0.3, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.stroke();
+      });
+      ctx.restore();
+    }
+
+    function drawCircusCurtains(ctx, P) {
+      ctx.save();
+      ctx.fillStyle = P.accent2;
+      // Rèm trái
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.lineTo(250, 0);
+      ctx.quadraticCurveTo(180, 175, 0, 260);
+      ctx.closePath();
+      ctx.fill();
+
+      // Rèm phải
+      ctx.beginPath();
+      ctx.moveTo(BASE_WIDTH, 0);
+      ctx.lineTo(BASE_WIDTH - 250, 0);
+      ctx.quadraticCurveTo(BASE_WIDTH - 180, 175, BASE_WIDTH, 260);
+      ctx.closePath();
+      ctx.fill();
+
+      // Viền dây vàng ánh kim
+      ctx.strokeStyle = '#fbbf24';
+      ctx.lineWidth = 5;
+      ctx.beginPath();
+      ctx.moveTo(250, 0);
+      ctx.quadraticCurveTo(180, 175, 0, 260);
+      ctx.moveTo(BASE_WIDTH - 250, 0);
+      ctx.quadraticCurveTo(BASE_WIDTH - 180, 175, BASE_WIDTH, 260);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawRoyalCrown(ctx, cx, cy, w) {
+      const h = w * 0.62;
+      ctx.save();
+      ctx.shadowColor = 'rgba(0,0,0,0.18)';
+      ctx.shadowBlur = 8;
+      ctx.beginPath();
+      ctx.moveTo(cx - w * 0.42, cy + h * 0.4);
+      ctx.lineTo(cx - w * 0.5, cy - h * 0.25);
+      ctx.lineTo(cx - w * 0.22, cy + h * 0.05);
+      ctx.lineTo(cx, cy - h * 0.45);
+      ctx.lineTo(cx + w * 0.22, cy + h * 0.05);
+      ctx.lineTo(cx + w * 0.5, cy - h * 0.25);
+      ctx.lineTo(cx + w * 0.42, cy + h * 0.4);
+      ctx.closePath();
+      ctx.fillStyle = '#fbbf24';
+      ctx.fill();
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = '#ffffff';
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawFourPointStar(ctx, cx, cy, r, color) {
+      ctx.save();
+      ctx.fillStyle = color;
+      ctx.beginPath();
+      ctx.moveTo(cx, cy - r);
+      ctx.quadraticCurveTo(cx, cy, cx + r, cy);
+      ctx.quadraticCurveTo(cx, cy, cx, cy + r);
+      ctx.quadraticCurveTo(cx, cy, cx - r, cy);
+      ctx.quadraticCurveTo(cx, cy, cx, cy - r);
+      ctx.closePath();
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function roundRectPath(ctx, x, y, w, h, r) {
+      ctx.beginPath();
+      ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r);
+      ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r);
+      ctx.arcTo(x, y, x + w, y, r);
+      ctx.closePath();
+    }
+
+    function drawImageTransformed(ctx, img, x, y, w, h, zoom = 1, offsetX = 0, offsetY = 0, rotDeg = 0) {
+      const iw = img.naturalWidth || img.width;
+      const ih = img.naturalHeight || img.height;
+      if (!iw || !ih) return;
+
+      ctx.save();
+      const cx = x + w / 2 + offsetX;
+      const cy = y + h / 2 + offsetY;
+      ctx.translate(cx, cy);
+      if (rotDeg !== 0) ctx.rotate((rotDeg * Math.PI) / 180);
+
+      const scale = Math.max(w / iw, h / ih) * zoom;
+      const drawW = iw * scale;
+      const drawH = ih * scale;
+      ctx.drawImage(img, -drawW / 2, -drawH / 2, drawW, drawH);
+      ctx.restore();
+    }
+
+    // =========================================================================
+    // XUẤT FILE ẢNH CHẤT LƯỢNG CAO CHUẨN IN ẤN (3000×4500 / 4000×6000 PX)
+    // =========================================================================
+    function exportHighResFile() {
+      const exportScale = parseInt(document.getElementById('exportResolution').value, 10);
+      const format = document.getElementById('exportFormat').value;
+      const outW = BASE_WIDTH * exportScale;
+      const outH = BASE_HEIGHT * exportScale;
+
+      const overlay = document.getElementById('exportOverlay');
+      const titleEl = document.getElementById('exportProgressTitle');
+      const barEl = document.getElementById('exportProgressBar');
+
+      titleEl.textContent = `Đang kết xuất ảnh ${outW} × ${outH} px...`;
+      barEl.style.width = '30%';
+      overlay.classList.remove('hidden');
+
+      setTimeout(() => {
+        try {
+          const offscreen = document.createElement('canvas');
+          offscreen.width = outW;
+          offscreen.height = outH;
+
+          barEl.style.width = '70%';
+          renderDesign(offscreen, exportScale, true);
+
+          const mime = format === 'jpeg' ? 'image/jpeg' : 'image/png';
+          const ext = format === 'jpeg' ? 'jpg' : 'png';
+
+          offscreen.toBlob((blob) => {
+            barEl.style.width = '100%';
+            if (!blob) {
+              overlay.classList.add('hidden');
+              showToast('Có lỗi khi tạo file ảnh.', '⚠️');
+              return;
+            }
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            const cleanName = (document.getElementById('inputNameLine2').value || 'SinhNhat24Thang')
+              .trim()
+              .replace(/\s+/g, '_');
+            a.href = url;
+            a.download = `Backdrop_${state.concept}_${cleanName}_${outW}x${outH}.${ext}`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            setTimeout(() => URL.revokeObjectURL(url), 5000);
+
+            overlay.classList.add('hidden');
+            showToast(`Đã tải xong ảnh ${outW}×${outH}px (${ext.toUpperCase()}) chuẩn đi in!`, '🎉');
+          }, mime, 1.0);
+        } catch (err) {
+          console.error(err);
+          overlay.classList.add('hidden');
+          showToast('Lỗi kết xuất ảnh, vui lòng thử lại.', '⚠️');
+        }
+      }, 150);
+    }
+  </script>
+</body>
+</html>
